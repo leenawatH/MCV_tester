@@ -11,11 +11,12 @@ app.set('view engine','ejs');
 /* Import routers of each module */
 const home = require('./routers/home-router');
 const course = require('./routers/course-router');
+const student = require('./routers/student-router');
 
 /* Route to the page per request */
 app.use('/', home);
 app.use('/course', course);
-
+app.use('/student', student);
 
 /* Running the server */
 app.listen(process.env.PORT, function(){
